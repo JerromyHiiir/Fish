@@ -1,0 +1,40 @@
+(function(window){
+
+    var ballMC = function (color, x, y, radius) {
+        //建構式
+        this.initialize(color, x, y, radius);
+    }
+
+    //繼承類別
+    var p = ballMC.prototype = new createjs.Container();
+    p.vx = 0;      //x軸的速率
+    p.vy = 0;      //y軸的速率
+    p.ax = 0;      //x軸的加速力
+    p.ay = 0;      //y軸的加速力
+    /*p.mainTF = false;
+    p.no = 0;
+    p.moveTF = false;*/
+
+    //建構式
+    p.Container_initialize = p.initialize;
+    p.initialize = function(color, x, y, radius){
+        this.Container_initialize();
+        var ball_mc = new createjs.Shape();
+        ball_mc.graphics.beginFill(color).drawCircle(x, y, radius);
+        this.addChild(ball_mc);
+        this.width = radius * 2;
+        this.height = radius * 2;
+        this.radius = radius;
+    }
+
+    p.setNumber = function(no) {
+        var noTxt = new createjs.Text(no, "28px Arial", "#000000");
+        var bounds = noTxt.getBounds();
+        noTxt.textAlign = 'center';
+        noTxt.y = -bounds.height / 2;
+        this.addChild(noTxt);
+    }
+
+    //把類別名稱掛在全域上
+    window.ballMC = ballMC;
+}(window));
