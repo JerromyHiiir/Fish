@@ -353,7 +353,8 @@ function initServer(){
 
   //Server = new FancyWebSocket("wss://"+"vaselinelink-minteract.rhcloud.com"+":8443");
   //https://fish-fish.44fs.preview.openshiftapps.com/
-  Server = new FancyWebSocket("wss://fish-fish.44fs.preview.openshiftapps.com:8443");
+  //8443
+  Server = new FancyWebSocket("wss://fish-fish.44fs.preview.openshiftapps.com");
 
   //連線開始
   Server.bind('open', function() {

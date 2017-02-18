@@ -382,7 +382,7 @@ function initServer(){
   //Server.send( 'message', clientID+'|-|send|-|message|-|'+groupID+'|-|click'+'|-|test');
 
   //Server = new FancyWebSocket("wss://"+"vaselinelink-minteract.rhcloud.com"+":8443");
-  Server = new FancyWebSocket("wss://fish-fish.44fs.preview.openshiftapps.com:8443");
+  Server = new FancyWebSocket("wss://fish-fish.44fs.preview.openshiftapps.com");
 
   //連線開始
   Server.bind('open', function() {
