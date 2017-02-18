@@ -109,7 +109,7 @@ $(document).ready(function(){
   if (window.location.protocol != "https:") {
       
 
-      window.location = "https://letspunch-minteract.rhcloud.com/";
+      window.location = "https://fish-fish.44fs.preview.openshiftapps.com/";
       //window.location.protocol = "https:";
       //window.location.reload();
   }else{
@@ -352,7 +352,8 @@ function initServer(){
   //Server.send( 'message', clientID+'|-|send|-|message|-|'+groupID+'|-|click'+'|-|test');
 
   //Server = new FancyWebSocket("wss://"+"vaselinelink-minteract.rhcloud.com"+":8443");
-  Server = new FancyWebSocket("wss://letspunch-minteract.rhcloud.com:8443");
+  //https://fish-fish.44fs.preview.openshiftapps.com/
+  Server = new FancyWebSocket("wss://fish-fish.44fs.preview.openshiftapps.com:8443");
 
   //連線開始
   Server.bind('open', function() {
@@ -411,7 +412,7 @@ function initServer(){
       
 
       groupID = obj.groupID;
-      qrCodeStr = "https://letspunch-minteract.rhcloud.com/m/index.html?groupID="+groupID;
+      qrCodeStr = "https://fish-fish.44fs.preview.openshiftapps.com/m/index.html?groupID="+groupID;
       console.log("Create Room Success: "+groupID);
 
       TweenMax.to(loadingTxt, 1.0, {alpha:0, delay:0.2, ease:"Linear.easeOut", onComplete:loadingCompleteAll});
