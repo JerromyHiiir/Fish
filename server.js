@@ -7,7 +7,7 @@ var server_ip_address = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.
 var fs = require("fs");
 var url = require("url");
 var path = require("path");
-//=====
+//===============
 
 var clientID = 0;
 var msgCount = 0;
